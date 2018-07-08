@@ -2,9 +2,9 @@
 
 ***Requirements***
 
-Deposit and Withdrawal
-Account statement (date, amount, balance)
-Statement printing
+- Deposit and Withdrawal
+- Account statement (date, amount, balance)
+- Statement printing
 
 **US 1:** <br/>
 In order to handle my moeny<br/>

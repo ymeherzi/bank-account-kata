@@ -1,4 +1,4 @@
-**Bank account kata**
+<h2>Bank account kata</h2>
 
 ***Requirements***
 

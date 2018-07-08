@@ -7,7 +7,7 @@
 - Statement printing
 
 **US 1:** <br/>
-In order to handle my moeny<br/>
+In order to handle my money<br/>
 As a bank client<br/>
 I want to create an account<br/>
 

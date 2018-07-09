@@ -1,4 +1,6 @@
 /target
+/domain/target
+/infrastructure/target
 *.jar
 *.class
 .idea/

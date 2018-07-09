@@ -5,12 +5,12 @@ import com.talan.kata.infrastructure.spi.AccountRepository;
 
 import java.util.function.Supplier;
 
-public class AccountService {
+public class BankAccountImpl implements BankAccount {
 
     private final AccountRepository repository;
     private final Supplier<String> accountIdSupplier;
 
-    public AccountService(Supplier<String> accountIdSupplier, AccountRepository repository) {
+    public BankAccountImpl(Supplier<String> accountIdSupplier, AccountRepository repository) {
         this.accountIdSupplier = accountIdSupplier;
         this.repository = repository;
     }

@@ -1,12 +1,11 @@
-package com.talan.kata.infrastructure.repository;
+package com.talan.kata.infrastructure.reopository;
 
 import com.talan.kata.infrastructure.core.Account;
-import com.talan.kata.infrastructure.reopository.InMemoryRepository;
 import org.junit.Test;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
-public class InMemoyRepositoryTest {
+public class InMemoryRepositoryTest {
 
     public InMemoryRepository repository = new InMemoryRepository();
 

@@ -1,6 +1,7 @@
 package com.talan.kata.infrastructure;
 
-import com.talan.kata.infrastructure.api.AccountService;
+import com.talan.kata.infrastructure.api.BankAccountImpl;
+import com.talan.kata.infrastructure.api.BankAccount;
 import com.talan.kata.infrastructure.reopository.InMemoryRepository;
 import com.talan.kata.infrastructure.rest.AccountController;
 import com.talan.kata.infrastructure.spi.AccountRepository;
@@ -22,7 +23,7 @@ public class Main {
     @NotNull
     private static AccountController factory() {
         AccountRepository repository = new InMemoryRepository();
-        AccountService service = new AccountService(() -> UUID.randomUUID().toString(), repository);
-        return new AccountController(service);
+        BankAccount bankAccount = new BankAccountImpl(() -> UUID.randomUUID().toString(), repository);
+        return new AccountController(bankAccount);
     }
 }

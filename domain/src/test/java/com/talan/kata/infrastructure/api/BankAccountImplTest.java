@@ -1,21 +1,21 @@
-package com.talan.kata.infrastructure.core;
+package com.talan.kata.infrastructure.api;
 
-import com.talan.kata.infrastructure.api.AccountService;
+import com.talan.kata.infrastructure.core.Account;
 import com.talan.kata.infrastructure.spi.AccountRepository;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.mockito.Mockito.*;
 
-public class BankAccountTest {
+public class BankAccountImplTest {
 
     private AccountRepository repository;
-    private AccountService service;
+    private BankAccount bankAccount;
 
     @Before
     public void setup() {
         repository = mock(AccountRepository.class);
-        service = new AccountService(() -> "0003", repository);
+        bankAccount = new BankAccountImpl(() -> "0003", repository);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class BankAccountTest {
         Account expected = new Account("0003", "yassine.mehrzi", "eur");
 
         // When
-        service.create("yassine.mehrzi", "eur");
+        bankAccount.create("yassine.mehrzi", "eur");
 
         // Then
         verify(repository, times(1)).save(expected);
